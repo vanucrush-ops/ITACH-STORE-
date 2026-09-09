@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ITACHI STORE</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+
+background:radial-gradient(circle,#400000,#000);
+
+color:white;
+
+}
+
+
+/* HEADER */
+
+header{
+
+background:linear-gradient(135deg,#000,#000);
+
+padding:25px;
+
+text-align:center;
+
+box-shadow:0 0 40px black;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid red;
+
+box-shadow:
+
+0 0 20px black,
+0 0 50px black,
+0 0 100px black;
+
+}
+
+
+
+/* STORE NAME */
+
+
+.store-name{
+
+font-size:45px;
+
+font-weight:900;
+
+margin-top:20px;
+
+color:white;
+
+letter-spacing:2px;
+
+text-shadow:
+
+0 0 10px black,
+0 0 20px black;
+
+}
+
+
+.store-name span{
+
+color:red;
+
+text-shadow:
+
+0 0 10px darkred,
+0 0 30px black;
+
+}
+
+
+
+.tagline{
+
+font-size:20px;
+
+margin-top:10px;
+
+color:gold;
+
+text-shadow:
+
+0 0 10px gold,
+0 0 20px black;
+
+}
+
+
+
+/* NAV */
+
+
+nav{
+
+margin-top:20px;
+
+}
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin:10px;
+
+font-weight:bold;
+
+}
+
+
+
+/* VIDEO */
+
+
+.video-box{
+
+width:90%;
+
+height:390px;
+
+margin:30px auto;
+
+border:3px solid gold;
+
+border-radius:25px;
+
+overflow:hidden;
+
+background:#111;
+
+position:relative;
+
+}
+
+
+
+video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+
+/* SOUND BUTTON */
+
+
+.sound-btn{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:red;
+
+color:white;
+
+border:3px solid white;
+
+padding:15px 35px;
+
+border-radius:30px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:
+
+0 0 20px #111,
+0 0 40px black;
+
+}
+
+
+.sound-btn:hover{
+
+background:white;
+
+color:red;
+
+}
+
+
+
+/* PROJECT CARDS */
+
+
+.products{
+
+padding:25px;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.card,
+.payment{
+
+
+background:#111;
+
+padding:30px;
+
+border-radius:20px;
+
+border:3px solid red;
+
+box-shadow:
+
+0 0 20px #111,
+0 0 50px #111;
+
+text-align:center;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:scale(1.05);
+
+background:#300000;
+
+}
+
+
+
+.card h3,
+.payment h2{
+
+color:red;
+
+text-shadow:
+
+0 0 10px red;
+
+}
+
+
+.card p{
+
+margin-top:10px;
+
+}
+
+
+
+
+/* PAYMENT */
+
+
+.payment{
+
+margin:25px;
+
+cursor:default;
+
+}
+
+
+
+footer{
+
+background:#000;
+
+padding:20px;
+
+text-align:center;
+
+color:black;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<img src="itachi.png" class="logo">
+
+
+
+<h1 class="store-name">
+
+<span>ITACHI</span> STORE
+
+</h1>
+
+
+
+<p class="tagline">
+
+Sri Lanka's Trusted ITACHI Store
+
+</p>
+
+
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Products</a>
+
+<a href="#">Contact</a>
+
+<a href="#">Pay</a>
+
+<a href="#">Admin</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<!-- VIDEO WITH SOUND BUTTON -->
+
+
+<div class="video-box">
+
+
+<video id="myVideo"
+
+src="promo.mp4"
+
+autoplay
+
+muted
+
+loop
+
+playsinline>
+
+</video>
+
+
+
+<button class="sound-btn" onclick="soundToggle()">
+
+🔊 Sound ON
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PROJECT VIEW -->
+<style>
+body{
+  background:linear-gradient(135deg,#000,#200000,#000);
+  font-family:Arial,sans-serif;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+.card{
+  background:black;
+  border:2px solid red;
+  border-radius:25px;
+  padding:35px 20px;
+  text-align:center;
+  color:black;
+  cursor:pointer;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 20px black;
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 40px black;
+  border-color:black;
+}
+
+.card h3{
+  font-size:24px;
+  color:white;
+  margin-bottom:15px;
+  text-shadow:0 0 10px black;
+}
+
+.card p{
+  color:white;
+  font-size:16px;
+}
+</style>
+
+<div class="products">
+
+  <div class="card" onclick="location.href='data.html'">
+    <h3>📶 Data Packages</h3>
+    <p>Click To View Products</p>
+  </div>
+
+  <div class="card" onclick="location.href='diamond.html'">
+    <h3>💎 Diamond Top Up</h3>
+    <p>Click To View Products</p>
+  </div>
+
+  <div class="card" onclick="location.href='glory.html'">
+    <h3>🤖 Glory Bots</h3>
+    <p>Click To View Products</p>
+  </div>
+
+  <div class="card" onclick="location.href='panel.html'">
+    <h3>🖥️ Panels</h3>
+    <p>Click To View Products</p>
+  </div>
+
+  <div class="card" onclick="location.href='premium.html'">
+<h3>⭐ Premium Tools</h3>
+    <p>Click To View Products</p>
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- PAYMENT -->
+
+<div class="payment">
+
+<img src="bank.jpeg" class="bank-logo">
+
+
+<h2>Payment / Bank Details</h2>
+
+
+<br>
+
+
+<p>
+Account Number:
+<b>0092726834</b>
+</p>
+
+
+<p>
+Bank:
+<b>BOC Bank</b>
+</p>
+
+
+<p>
+Account Name:
+<b>MR S HIPILOSHAN</b>
+</p>
+
+
+</div>
+
+<footer>
+
+<p>
+WhatsApp:
+<b>+94 0752795218</b>
+</p>
+
+</footer>
+
+
+<style>
+
+footer{
+
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+border-top:2px solid red;
+}
+
+
+.whatsapp-logo{
+
+width:50px;
+height:50px;
+object-fit:contain;
+margin-bottom:10px;
+
+}
+
+
+footer b{
+
+color:#25D366;
+font-size:18px;
+
+}
+
+</style>
+<style>
+
+.payment{
+
+background:#111;
+color:white;
+border:2px solid red;
+border-radius:20px;
+padding:30px;
+margin:30px auto;
+width:90%;
+max-width:400px;
+box-shadow:0 0 25px red;
+text-align:center;
+
+}
+
+
+.bank-logo{
+
+width:120px;
+height:120px;
+object-fit:contain;
+margin-bottom:15px;
+
+border-radius:20px;
+
+}
+
+
+.payment h2{
+
+color:red;
+text-shadow:0 0 10px red;
+
+}
+
+
+.payment p{
+
+font-size:17px;
+
+}
+
+
+.payment b{
+
+color:#ff3333;
+
+}
+
+</style>
+
+
+
+
+
+</div>
+
+
+
+<footer>
+
+ITACHI STORE
+
+<br>
+
+100% Trusted | Fast Delivery
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+function soundToggle(){
+
+let video=document.getElementById("myVideo");
+
+let btn=document.querySelector(".sound-btn");
+
+
+if(video.muted){
+
+video.muted=false;
+
+btn.innerHTML="🔇 Sound OFF";
+
+}
+
+else{
+
+video.muted=true;
+
+btn.innerHTML="🔊 Sound ON";
+
+}
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
